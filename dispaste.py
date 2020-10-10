@@ -1,6 +1,7 @@
 import os
 import discord
 from dotenv import load_dotenv
+import requests
 
 load_dotenv()
 
@@ -16,3 +17,8 @@ class PastebinInt:
     # Write __init__() here
 
     TOKEN = os.getenv('PASTEBIN_TOKEN')
+    url = ''
+    login = {}
+    paste = {}
+    
+    x = requests.post(url, data = paste)
